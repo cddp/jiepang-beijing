@@ -1,0 +1,118 @@
+// Typography Dimensions
+@char: 14px;
+@vu: 20px;
+@gut: 20px;
+@col: 200px;
+@pad: 10px;
+
+@sans: "黑体", "Open Sans", "Helvetica Neue", "Helvetica", "Droid Sans", "Arial", sans-serif;
+
+// Color Scheme
+@text: #FFFFFF;
+@gray: #666666;
+@back: #000000;
+
+.clear(){
+  margin: 0;
+  padding: 0;
+}
+// Base Types
+strong {
+  font-weight: 600;
+}
+h1, h2, h3, h4 {
+  font-weight: 300;
+  .clear;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.2em;
+}
+p {
+  .clear;
+}
+
+
+// General Settings
+html {
+  .clear;
+}
+
+body {
+  .clear;
+  font-family: @sans;
+  font-size: @char;
+  line-height: @vu;
+  color: @text;
+  font-weight: 300;
+  background-color: @back;
+}
+
+a {
+  text-decoration: none;
+  color: @text;
+  &:visited  {
+    color: @text;
+  }
+  &:hover {
+    color: @text;
+  }
+}
+.half_vert_pad(){
+  padding-top:@vu / 2;
+  padding-bottom:@vu / 2;
+}
+
+.container {
+  .clear;
+}
+#header {
+  .half_vert_pad;
+  .hititle {
+    color: @text;
+    margin-left: @gut;
+    width: @col;
+  }
+  .medtitle {
+    color: darken(@text, 30%);
+    margin-left: @gut;
+    width: @col;
+  } 
+}
+#footer {
+  .half_vert_pad;
+  height: @vu;
+  #legend{
+    position: absolute;
+    width: 100%;
+    padding-left: @gut;
+    .category{
+      margin-right: @gut;
+      font-size: 0.7em;
+      .clabel {
+        color: darken(@text, 50%);
+        font-size: @char;
+      }
+      span.csquare {
+        margin-right: @char / 3;
+        padding-left: @vu/2 - 5;
+        padding-right: @vu/2 - 3;
+        height: @char;
+        opacity: 0.6;
+      }
+    }
+  }
+  #attribution {
+    color: darken(@text, 50%);
+    text-align: right;
+    padding-right: @gut;
+    .amper {
+      color: @text;
+    }
+  }
+}
+
+
+
